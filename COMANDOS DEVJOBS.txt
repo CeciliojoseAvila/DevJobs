@@ -1,0 +1,125 @@
+NUEVO PROYECTO DEVJOBS
+1) npm init
+descripcion: Portal DevJobs con Node.js, Handlebars, Mongoose.
+License: "ISC"
+
+2) npm i --save express express-handlebars
+2) npm i --save-dev nodemon
+3) crear index.js y en package.json ==> "start": "nodemon ./index"
+
+====> npm start
+
+4) conectar mongo- compass con mongo-atlas ===> mongodb+srv://cecilioavila614:<password>@cluster0.yqvrepi.mongodb.net/
+
+nombre del proyecto en mongo==> DevJobs -> coleccion ==> vacantes 
+
+5) npm install --save dotenv connect-mongo mongoose shortid slug express-session cookie-parser  //instalar version 3 de connect-mongo ==== npm install connect-mongo@3
+
+====> Despues de crear la DB en ,ongo atlas y crear el archivo config: db.js, nos vamos a index.js el general e importamos mongoose.
+
+6) ========> npm install handlebars  handlebars-helpers --save 
+
+6) implementar trix, en public, js, trix.js y hacer el llamado en layout: layout.handlebars
+
+
+===> crear el helpers: handlebars.js, lo llamamos en el index.js general y lo ejecutamos en la vista: nueva-vacante.handlebars
+
+7) npm install --save-dev @babel/core  @babel/preset-env babel-loader webpack webpack-cli ===> npm install --save concurrently  (npm i -D handlebars@4.5.0) 
+=========> crear archivo: webpack.config.js y en la carpeta js de public, creamos app.js
+
+====> npm i --save connect-flash express-validator
+====> npm i --save passport passport-local
+
+8) npm install @handlebars/allow-prototype-access
+//////////// agregar estas lineas para eliminar error en handlebars de paternidad
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
+const Handlebars = require("handlebars");
+
+app.engine(
+  "handlebars",
+  exphbs.engine({
+    defaultLayout: "layout",
+    helpers: require("./helpers/handlebars.js"),
+ ======>   handlebars: allowInsecurePrototypeAccess(Handlebars),
+  })
+);
+
+Buscamos Desarrollador React.
+Ofrecemos lo sgte:
+Estabilidad laboral
+capacitación
+Buen ambiente
+
+
+En AirBNB buscamos Desarrollador Web con conocimientos en Node.Js
+Ofrecemos lo sgte:
+Excelente salario
+Seguro médico
+Aprendizaje Médico
+Buen ambiente laboral
+
+8) npm install --save bcrypt
+====> npm i --save connect-flash express-validator
+//La última versión de no funciona con archivos .express-validatorapp.use
+//Necesitas usarlo así:
+const { check, validationResult } = require('express-validator');
+app.post('/user', [check('title',"title cannot be empty").notEmpty()], (req, res, next) => {});
+
+// Ó desintalar y volver a instalar:
+ ====>  npm uninstall express-validator 
+====> version anterior:
+npm install express-validator@5.3.1
+
+//
+ ====>  npm install --save passport passport-local
+
+
+////////////    EJEMPLO VACANTE ///////////
+
+React Developer Sr
+Facebook 
+Remoto
+3000
+T comp
+" Facebook solicita un Desarrollador Senior,
+Ofrecemos lo sgte:
+Excelente salario
+Seguro médico
+Aprendizaje Médico
+Buen ambiente laboral"
+
+///////////////////////////         Nueva Instalacion                /////////////////////
+9)  ====>  npm install --save axios sweetalert2
+
+9)  ====>  npm install --save multer
+10) ====>  npm install --save nodemailer nodemailer-express-handlebars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
